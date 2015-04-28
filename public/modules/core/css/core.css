@@ -1,0 +1,151 @@
+        .angular-google-map-container {
+          width: 700px; height: 600px
+        }
+.item-groups{
+  border: 3px solid #a1a1a1;
+     width: 710px; height: 610px;
+    text-align: center;
+  
+}
+div.mCard{
+
+  position:relative;
+   top:-70px;
+    left: 210px;
+}
+div.mchart{
+ width: 100%;
+    
+}
+.page-header {
+  margin: -16px 0 20px;
+  border-bottom: none;
+  opacity: 0.7;
+  text-transform: uppercase;
+    font-size: 30px;
+    
+    
+}
+.poweredBy li a{
+    color: black;
+}
+.sub-menu li.active a{
+    border-bottom: 1px solid #d0d8df;   
+}
+
+.breadcrumb{
+ position:relative;
+left:160px;
+    background-color: white;
+    width: 90%;
+    
+}
+.breadcrumb li{
+color: gray;
+    
+}
+.breadcrumb li a{
+color: dodgerblue;
+    
+}
+.breadcrumb li i{
+color: gray;
+    
+}
+.page-header {
+
+    position:relative;
+left:170px;
+}
+
+
+center.cardInfo{
+  position:relative;
+ top:50px;
+
+}
+div.well{
+   
+ position:relative;
+   
+    left: 160px;
+}
+
+table.subChart{
+
+  position:relative;
+     top:-145px;
+    left: 160px;
+ display:table;
+    
+}
+table.mTable{
+  position:relative;
+   top:-85px;
+    left: 100px;
+}
+div.co3{
+   float:left;
+margin:5px;
+align:center;
+    text-align: center;
+}
+dic.le{
+ 
+      top:-90px;
+}
+
+span.glyphicon.bigGly{
+
+font-size: 4em;
+}
+p.pCR{
+     position:relative;
+left:170px;
+}
+div.leftT{
+    float:left;
+  
+  position:relative;
+     top:-150px;
+    left: 160px;
+    
+margin:5px;
+align:center;
+}
+div.subC{
+padding: 3px;
+    margin: 3px;
+}
+table#infoT{
+ width: 250px; height: 655px;
+}
+
+
+table#map{
+      width: 700px; height: 600px;
+}
+table.mapT {
+    width: 700px; height: 600px;
+}
+table.chartT {
+    width: 30%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th	{
+    background-color: black;
+    color: white;
+}

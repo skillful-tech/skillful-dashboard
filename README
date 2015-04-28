@@ -1,0 +1,15 @@
+Smart appi SPA using MEANjs 
+Dependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils','angularChart','uiGmapgoogle-maps']
+bower install angular-chart --save
+(
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/c3/c3.js"></script>
+<script src="bower_components/angular-chart/angular-chart.js"></script>
+)
+
+bower install angular-google-maps
+(
+<script src='/path/to/lodash[.min].js'></script>
+<script src='/path/to/angular-google-maps[.min].js'></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+)

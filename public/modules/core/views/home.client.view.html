@@ -1,0 +1,274 @@
+<section data-ng-controller="HomeController">
+    
+    <h3 class="page-header">
+        <i class="fa fa-laptop"></i>
+        Dashboard
+    </h3>
+  
+    	<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href="/"> Home</a></li>
+						<li><i class="fa fa-laptop"></i> Dashboard</li>						  	
+	    </ol>
+    <br/>
+    
+  
+    
+	<div class="jumbotron text-center"> 
+         <center>
+		<div class="row">
+          
+		    <div class="row placeholders mCard">
+          
+		    <div class="col-xs-6 col-sm-3 placeholder">
+              <div style="width:245px;height:205px;background-color:#57889c;color:white ">
+                 <span class="glyphicon glyphicon-bookmark bigGly"></span>
+                  <p style="text-align:left"> NUMBER PRODUCERS                
+</p><h2 style="vertical-align: middle;font-size:35px">3292</h2>
+             </div>
+             
+             <span class="text-muted"></span>
+            </div>
+               <div class="col-xs-6 col-sm-3 placeholder">
+                   <!--width:220px;height:170px-->
+              <div style="width:245px;height:205px;background-color:#d1b993;color:white ">
+                 <span class="glyphicon glyphicon-euro bigGly"></span>
+			  <p style="text-align:left">CURRENT MILK PRICE</p><h2 style="
+  vertical-align: middle;font-size:35px"> €0.39/cl</h2>
+             </div>
+            
+             <span class="text-muted"></span>
+            </div>
+           <div class="col-xs-6 col-sm-3 placeholder">
+              <div style="width:245px;height:205px;background-color:#1a2732;color:white ">
+                   <span class="glyphicon glyphicon-tag bigGly"></span>
+			  <p style="text-align:left">MILK PRODUCED TO DATE 2015</p><h2 style="
+  vertical-align: middle;font-size:35px">750,000L</h2>
+             </div>
+            
+             <span class="text-muted"></span>
+            </div>
+                  
+		
+		 </div>
+                </center>
+         
+             
+                 
+                  <table class="table table-bordered table-hover table-striped mTable" style="background-color:#ffffff">
+  <tr>
+    <th> <span class="glyphicon glyphicon-tasks"></span> Chart  <span class="glyphicon glyphicon-fullscreen" onclick="showCm()" style="float:right;margin:5px"></span> <span class="glyphicon glyphicon-remove" onclick="hideCm()" style="float:right;margin:5px"></span>  </th>
+   
+  </tr>
+  <tr>
+    <td>  
+                 
+                 
+                 
+            <div id="chartM" ng-controller="lineCrl" class="mchart">
+  <angularchart
+    dataset="dataset"
+    schema="schema"
+    options="options">
+  </angularchart>
+</div>
+        
+               </td>
+             </tr>
+   
+</table>
+		 </div> 
+            
+	<div class="le">
+        
+      <div class="leftT">
+     <table class="table table-bordered table-hover table-striped" id="map" style="background-color:#ffffff">
+  <tr>
+    <th>  <span class="glyphicon glyphicon-map-marker"></span> Ireland Map <span class="glyphicon glyphicon-fullscreen" onclick="showM()" style="float:right;margin:5px"></span> <span class="glyphicon glyphicon-remove" onclick="hideM()" style="float:right;margin:5px"></span> </th>
+   
+  </tr>
+  <tr>
+    <td>  
+        
+        
+        <center>
+      
+           
+           
+    
+          <div id="map_canvas" ng-controller="mainCtrl">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options" dragging="dragging">
+               <ui-gmap-circle ng-repeat="c in circles track by c.id" center="c.center" stroke="c.stroke" fill="c.fill" radius="c.radius"
+                visible="c.visible" geodesic="c.geodesic" editable="c.editable" draggable="c.draggable" clickable="c.clickable" control="c.control" click="onClick()">
+                     <ui-gmap-window options="windowOptions" closeClick="closeClick()">
+                <div>{{title}}</div>
+            </ui-gmap-window>
+        </ui-gmap-circle>
+              </ui-gmap-google-map>
+            
+</div>
+    </center>
+       
+      </td>
+         </tr>
+</table>
+        </div>
+        <div class="leftT">
+              <table class="table table-bordered table-hover table-striped" style="background-color:#ffffff" id="infoT">
+                    <tr>
+    <th>  <span class="glyphicon glyphicon-pushpin"></span> Info <span class="glyphicon glyphicon-fullscreen" onclick="showI()" style="float:right;margin:5px"></span> <span class="glyphicon glyphicon-remove" onclick="hideI()" style="float:right;margin:5px"></span></th>
+   
+  </tr>
+  <tr>
+    <td>  
+        
+        
+        <center  class="cardInfo">
+      <div id="infoG">
+           
+      <div >
+              <div style="width:220px;height:115px;background-color:#D63030;color:white ">
+                 
+			  <p style="text-align:left"> NUMBER PRODUCERS                
+</p><h2 style="
+  vertical-align: middle">3292</h2>
+             </div>
+             <p></p>
+             <span class="text-muted"></span>
+            </div>
+                  <div>
+              <div style="width:220px;height:115px;background-color:#D63030;color:white ">
+                 
+			  <p style="text-align:left"> NUMBER PRODUCERS                
+</p><h2 style="
+  vertical-align: middle">3292</h2>
+             </div>
+             <p></p>
+             <span class="text-muted"></span>
+            </div>
+                 <div>
+              <div style="width:220px;height:115px;background-color:#D63030;color:white ">
+                 
+			  <p style="text-align:left"> NUMBER PRODUCERS                
+</p><h2 style="
+  vertical-align: middle">3292</h2>
+             </div>
+             <p></p>
+             <span class="text-muted"></span>
+            </div>
+            
+</div>
+    </center>
+       
+      </td>
+                  </tr>
+                  
+            </table>
+        </div>
+            
+      
+        
+        
+	<br/>
+         <table class="table table-bordered table-hover table-striped subChart" style="background-color:#ffffff">
+  <tr>
+    <th><i class="fa fa-area-chart"></i> Charts <span class="glyphicon glyphicon-fullscreen" onclick="showC()" style="float:right;margin:5px"></span> <span class="glyphicon glyphicon-remove" onclick="hideC()" style="float:right;margin:5px"></span></th>
+   
+  </tr>
+  <tr>
+    <td>  
+         <div id="chartS" class="row placeholders subC">
+		 <div class="container">
+
+ 
+		 
+            <div class="col-xs-6 col-sm-3 placeholder fCh">
+                <center>
+			               <div ng-controller="pieCrl">
+  <angularchart
+    dataset="dataset"
+    schema="schema"
+    options="options">
+  </angularchart>
+</div>
+         
+              <h4>Label</h4>
+              
+              <span class="text-muted">Something else</span>
+                      </center>
+            </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+                <center>
+			               <div ng-controller="donutCrl">
+  <angularchart
+    dataset="dataset"
+    schema="schema"
+    options="options">
+  </angularchart>
+</div>
+         
+              <h4>Label</h4>
+              
+              <span class="text-muted">Something else</span>
+                      </center>
+            </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                <center>
+			               <div ng-controller="areaCrl">
+  <angularchart
+    dataset="dataset"
+    schema="schema"
+    options="options">
+  </angularchart>
+</div>
+         
+              <h4>Label</h4>
+              
+              <span class="text-muted">Something else</span>
+                      </center>
+            </div>
+               <div class="col-xs-6 col-sm-3 placeholder">
+                <center>
+			               <div ng-controller="gaugeCrl">
+  <angularchart
+    dataset="dataset"
+    schema="schema"
+    options="options">
+  </angularchart>
+</div>
+         
+              <h4>Label</h4>
+              
+              <span class="text-muted">Something else</span>
+                      </center>
+            </div>
+             </div>
+    </div>
+        
+        
+           </td>
+             </tr>
+   
+</table>
+        <br/>
+         </div>
+	<div class="well">
+		<h2>Smart appi</h2>
+		<p>
+			Powered by
+
+
+			<ul class="poweredBy">
+				<li><a target="_blank" href="http://tssg.org/">TSSG Arclabs</a>
+				</li>
+				<li><a target="_blank" href="http://wit.ie">Waterford Institute of Techonology</a>
+				</li>
+			
+			</ul>
+		</p>
+	</div>
+	<br><p class="pCR">Copy Right 2015,
+    <br>TSSG.</p>
+  
+    
+</section>
+    
